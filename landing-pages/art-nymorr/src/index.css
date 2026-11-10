@@ -1,0 +1,63 @@
+:root {
+  /* Charte du logo Art Nymorr : noir, orange, blanc */
+  --ink: #111111;          /* noir du logo */
+  --paper: #f6f5f2;        /* fond clair neutre */
+  --paper-2: #ffffff;      /* blanc */
+  --wall: #eeece7;         /* mur derrière les tableaux */
+  --line: #e4e1db;
+  --muted: #4a4a4a;
+  --muted-2: #5c5c5c;
+  --on-dark: #cfcfcf;
+  --vermilion: #dd8f26;    /* orange du logo (fonds, traits, boutons) */
+  --vermilion-text: #9e5c0a; /* orange foncé pour le texte sur fond clair (contraste AA) */
+  --ochre: #dd8f26;        /* orange du logo sur fond noir */
+  --error: #b42318;
+
+  /* Polices proches du logo : titres géométriques (Outfit), textes et libellés (Montserrat) */
+  --font-display: 'Outfit', system-ui, sans-serif;
+  --font-body: 'Montserrat', system-ui, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: var(--paper);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: var(--ink);
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    transition: none !important;
+  }
+}
