@@ -1,7 +1,9 @@
+import { useCommandeModal } from '../../context/CommandeContext.jsx'
 import { PACKS } from '../../data/packs.js'
 import { lienCommandeWhatsApp } from '../../utils/commandeWhatsApp.js'
 
 export default function FormulaireHero() {
+  const { pack, setPack } = useCommandeModal()
   function contacter(event) {
     event.preventDefault()
     const champs = new FormData(event.currentTarget)
@@ -19,7 +21,7 @@ export default function FormulaireHero() {
       </label>
       <label>
         <span>Packs (optionnel)</span>
-        <select name="pack" defaultValue="">
+        <select name="pack" value={pack} onChange={(event) => setPack(event.target.value)}>
           <option value="">Choisir un pack</option>
           {PACKS.map((pack) => <option key={pack.id} value={pack.id}>{pack.nom} · {pack.prix} MAD</option>)}
         </select>

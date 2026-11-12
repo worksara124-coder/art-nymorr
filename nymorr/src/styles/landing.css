@@ -345,3 +345,24 @@ details[open] .plus svg { transform: rotate(45deg); }
 /* Sélection facultative du pack, dans les deux formulaires. */
 .hero-form select, .form select { width: 100%; min-width: 0; border: 1px solid #c9c3bb; background: white; color: var(--ink); border-radius: 7px; padding: 11px; font: inherit; font-size: 16px; min-height: 44px; }
 .hero-form select:focus-visible, .form select:focus-visible { outline: 2px solid var(--orange); outline-offset: 2px; }
+
+/* Cartes de packs du hero, identiques au sélecteur du popup. */
+.hero__packs::before { display: none; }
+.hero__packs .choix { min-width: 0; margin: 0; padding: 0; border: 0; }
+.hero__packs-title { padding: 0; margin-bottom: 14px; font-size: 15px; font-weight: 600; }
+.hero__packs-title span { font-size: 12px; font-weight: 400; }
+.hero__packs .choix__item { min-width: 0; }
+@media (max-width: 640px) {
+  .hero__packs-title { font-size: 13px; margin-bottom: 10px; }
+  .hero__packs .choix__name { font-size: 13px; padding-inline: 2px; }
+  .hero__packs .choix__meta { font-size: 10px; padding-inline: 2px; }
+  .hero__packs .choix__price { font-size: 12px; padding-inline: 2px; }
+}
+
+/* Photo originale sur ordinateur, cartes de packs sur mobile uniquement. */
+.hero__desktop-photo { display: block; }
+.hero__packs { display: none; }
+@media (max-width: 640px) {
+  .hero__desktop-photo { display: none; }
+  .hero__packs { display: block; }
+}
