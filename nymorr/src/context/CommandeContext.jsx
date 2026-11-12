@@ -4,7 +4,7 @@ import { createContext, useCallback, useContext, useMemo, useState } from 'react
 const CommandeContext = createContext(null)
 
 export function CommandeProvider({ children }) {
-  const [pack, setPack] = useState('duo')
+  const [pack, setPack] = useState('')
   const [ouvert, setOuvert] = useState(false)
 
   // ouvrir() garde le pack actuel ; ouvrir('galerie') présélectionne un pack

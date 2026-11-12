@@ -16,9 +16,9 @@ export default function Footer() {
           <div>
             <p className="footer__title">Contact</p>
             <ul>
-              <li>[Téléphone / WhatsApp]</li>
-              <li>[E-mail]</li>
-              <li>[Instagram]</li>
+              <li><a href="tel:+212688023241">06 88 02 32 41</a></li>
+              <li><a href="https://wa.me/212688023241" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+              <li><a href="mailto:info@nymorr.com">info@nymorr.com</a></li>
             </ul>
           </div>
           <div>

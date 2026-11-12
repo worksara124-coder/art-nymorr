@@ -25,7 +25,7 @@ export default function Solution() {
         <Etapes />
         <div className="cta-row">
           <BoutonCommande>
-            Choisir mon pack <Fleche />
+            Commander <Fleche />
           </BoutonCommande>
           <Reassurance />
         </div>

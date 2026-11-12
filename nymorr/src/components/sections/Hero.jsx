@@ -1,7 +1,7 @@
+import FormulaireHero from '../commande/FormulaireHero.jsx'
 import photoGalerie from '../../assets/photo-pack-galerie.webp'
 import { Coche, Fleche } from '../ui/Icons.jsx'
 import Reassurance from '../ui/Reassurance.jsx'
-import PreuveSociale from '../ui/PreuveSociale.jsx'
 import BoutonCommande from '../commande/BoutonCommande.jsx'
 import { DEVISE, PRIX_MIN } from '../../data/landing.js'
 
@@ -21,6 +21,7 @@ export default function Hero() {
             Des œuvres abstraites et inspirées de l’Afrique, déjà pensées pour aller ensemble : vous choisissez le
             pack, nous vous aidons à composer le mur.
           </p>
+          <FormulaireHero />
           <ul className="hero__benefits">
             <li><Coche /> Des tableaux assortis, sans risque de fausse note</li>
             <li><Coche /> 1, 2 ou 3 tableaux selon la taille de votre mur</li>
@@ -28,12 +29,12 @@ export default function Hero() {
           </ul>
           <div className="hero__ctas">
             <BoutonCommande>
-              Choisir mon pack <Fleche />
+              Commander <Fleche />
             </BoutonCommande>
-            <a href="#packs" className="btn btn--outline-light">Voir les prix</a>
+            <BoutonCommande className="btn btn--outline-light">Commander</BoutonCommande>
           </div>
           <Reassurance clair />
-          <PreuveSociale />
+
         </div>
 
         <figure className="hero__visual">

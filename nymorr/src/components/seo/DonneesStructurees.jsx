@@ -16,6 +16,8 @@ export default function DonneesStructurees() {
         '@type': 'Organization',
         '@id': `${SITE_URL}/#organisation`,
         name: 'Art Nymorr',
+        email: 'info@nymorr.com',
+        telephone: '+212688023241',
         url: `${SITE_URL}/`,
         logo: `${SITE_URL}${logo}`,
         description: 'Tableaux décoratifs abstraits et africains, proposés en packs de 1, 2 ou 3 tableaux.',

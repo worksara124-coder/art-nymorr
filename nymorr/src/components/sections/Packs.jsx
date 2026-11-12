@@ -67,7 +67,7 @@ export default function Packs() {
                   ))}
                 </ul>
                 <BoutonCommande pack={p.id} className={'btn btn--full ' + (p.sombre ? 'btn--accent' : 'btn--dark')}>
-                  Choisir le {p.nom}
+                  Commander
                 </BoutonCommande>
               </div>
             </article>

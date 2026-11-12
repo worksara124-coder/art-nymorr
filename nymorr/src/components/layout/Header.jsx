@@ -8,7 +8,7 @@ export default function Header() {
         <a href="#top" className="logo" aria-label="Art Nymorr, retour en haut">
           <img src={logo} alt="Art Nymorr — tableaux décoratifs" width="480" height="191" />
         </a>
-        <BoutonCommande className="btn btn--accent btn--sm">Choisir mon pack</BoutonCommande>
+        <BoutonCommande className="btn btn--accent btn--sm">Commander</BoutonCommande>
       </div>
     </header>
   )

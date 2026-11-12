@@ -1,10 +1,11 @@
 import { useState } from 'react'
+import { lienCommandeWhatsApp } from '../utils/commandeWhatsApp.js'
 import valider from '../utils/validerCommande.js'
 
-// Formulaire court (guide SYO WEB) : pack + prénom + téléphone
-const VIDE = { nom: '', tel: '' }
+// Validation des coordonnées avant ouverture de WhatsApp.
+const VIDE = { nom: '', tel: '', adresse: '' }
 
-export default function useCommande() {
+export default function useCommande(pack) {
   const [valeurs, setValeurs] = useState(VIDE)
   const [erreurs, setErreurs] = useState({})
   const [essaye, setEssaye] = useState(false)
@@ -22,9 +23,8 @@ export default function useCommande() {
     setErreurs(e)
     setEssaye(true)
     if (Object.keys(e).length === 0) {
-      // Démonstration : aucune donnée n'est envoyée.
-      // Pour un envoi réel, passer le pack sélectionné à ce hook et connecter une API.
       setEnvoye(true)
+      window.location.assign(lienCommandeWhatsApp({ ...valeurs, pack }))
     }
   }
 

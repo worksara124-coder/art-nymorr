@@ -21,7 +21,7 @@ export default function BarreMobile() {
         <span>dès {PRIX_MIN} {DEVISE}</span>
       </p>
       <button type="button" className="btn btn--accent" onClick={() => ouvrir()} tabIndex={visible && !ouvert ? 0 : -1} aria-haspopup="dialog">
-        Choisir mon pack
+        Commander
       </button>
     </div>
   )
