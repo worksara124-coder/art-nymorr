@@ -35,6 +35,7 @@ export const PACKS = [
     id: 'galerie',
     nom: 'Pack Galerie',
     court: 'Galerie',
+    badge: 'Le plus vendu',
     nombre: '3 tableaux',
     description: 'Une composition murale complète pour transformer un grand mur en véritable galerie.',
     prix: 649,

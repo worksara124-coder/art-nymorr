@@ -366,3 +366,6 @@ details[open] .plus svg { transform: rotate(45deg); }
   .hero__desktop-photo { display: none; }
   .hero__packs { display: block; }
 }
+
+.choix__bestseller { display: inline-block; max-width: 100%; margin: 3px 2px; padding: 3px 5px; border-radius: 5px; background: var(--orange); color: var(--ink); font-size: 10px; font-weight: 700; line-height: 1.35; }
+.hero__tag .choix__bestseller { color: var(--ink); font-size: 11px; }

@@ -94,6 +94,7 @@ export default function ModalCommande() {
                   >
                     <img src={p.photo} alt="" width="960" height="720" loading="lazy" decoding="async" />
                     <span className="choix__name">{p.court}</span>
+                  {p.id === 'galerie' && <span className="choix__bestseller">{p.badge}</span>}
                     <span className="choix__meta">{p.nombre}</span>
                     <span className="choix__price">{p.prix} {DEVISE}</span>
                   </button>

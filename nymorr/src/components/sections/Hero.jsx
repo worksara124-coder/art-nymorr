@@ -15,7 +15,7 @@ export default function Hero() {
       <div className="wrap hero__grid">
         <div className="hero__text">
           <p className="hero__hook">
-            <span className="dot" aria-hidden="true" /> Packs de 1 à 3 tableaux · dès {PRIX_MIN} {DEVISE}
+            Packs de 1 à 3 tableaux · dès {PRIX_MIN} {DEVISE}
           </p>
           <h1 className="h1">
             Des tableaux décoratifs qui <span className="h1__accent">transforment</span> vos murs
@@ -46,6 +46,7 @@ export default function Hero() {
             width="960" height="720" fetchPriority="high" decoding="async" />
           <figcaption className="hero__tag">
             <b>Pack Galerie</b>
+            <span className="choix__bestseller">Le plus vendu</span>
             <span>3 tableaux · 649 {DEVISE}</span>
           </figcaption>
         </figure>
@@ -64,6 +65,7 @@ export default function Hero() {
                 >
                   <img src={p.photo} alt="" width="960" height="720" fetchPriority={index === 0 ? 'high' : 'auto'} decoding="async" />
                   <span className="choix__name">{p.court}</span>
+                  {p.id === 'galerie' && <span className="choix__bestseller">{p.badge}</span>}
                   <span className="choix__meta">{p.nombre}</span>
                   <span className="choix__price">{p.prix} {DEVISE}</span>
                 </button>
